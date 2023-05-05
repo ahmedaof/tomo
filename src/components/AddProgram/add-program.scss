@@ -1,0 +1,102 @@
+@use "../../sass/base/function" as *;
+@use "../../sass/base/mixin" as *;
+
+@include fontFace(
+  "Tajawal",
+  "../../assets/fonts/Tajawal/Tajawal-Regular.ttf",
+  "ttf"
+);
+
+.add-program-modal {
+  font-family: "Tajawal";
+  padding: 60px;
+
+  .create {
+    p {
+      font-size: pxToRem(24);
+    }
+  }
+
+  .import {
+    button {
+      font-size: pxToRem(14);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 40.5px;
+    }
+  }
+
+  .field-label {
+    font-size: 20px;
+    color: #29384e;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .field {
+    height: 54px;
+    width: 100%;
+    display: block;
+    padding: 16px;
+    border: 1px solid rgba(38, 50, 56, 0.1);
+    border-radius: 10px;
+  }
+  .field-icon {
+    position: absolute;
+    bottom: 21px;
+    max-width: 12px;
+    left: 16px;
+  }
+
+  .field-textarea {
+    height: 134px;
+  }
+}
+
+// .add-program {
+//   font-family: "Tajawal";
+//   // width: 66.2%;
+//   .add-program-container {
+//     .create {
+//       p {
+//         font-size: pxToRem(24);
+//       }
+//     }
+//     .import {
+//       button {
+//         font-size: pxToRem(14);
+//         display: flex;
+//         align-items: center;
+//         gap: 8px;
+//         padding: 12px 40.5px;
+//       }
+//     }
+//     .accordion-wrapper {
+//       h2 {
+//         font-size: pxToRem(20);
+//         line-height: 24px;
+//         font-weight: 500;
+//         color: #29384e;
+//       }
+//     }
+//     .buttons {
+//       div {
+//         button {
+//           width: 100%;
+//           padding: 12px 0px;
+//           font-size: pxToRem(18);
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .add-program.show {
+//   display: block;
+// }
+// .add-program.hide {
+//   display: none;
+// }

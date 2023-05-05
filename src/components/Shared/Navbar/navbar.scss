@@ -1,0 +1,130 @@
+@use "../../../sass/base/mixin" as *;
+@use "../../../sass/base/function" as *;
+
+@include fontFace(
+  "Tajawal",
+  "../../assets/fonts/Tajawal/Tajawal-Regular.ttf",
+  "ttf"
+);
+@include fontFace(
+  "Roboto",
+  "../../assets/fonts/Roboto/Roboto-Regular.ttf",
+  "ttf"
+);
+
+nav {
+  font-family: "Tajawal", sans-serif;
+  padding: 18.5px 0px;
+  // List Section On Small Screens
+  .lists {
+    top: -300px;
+    transition: all 0.3s linear;
+    .user {
+      .name {
+        font-size: pxToRem(20);
+      }
+      .type {
+        font-size: pxToRem(20);
+      }
+    }
+    .settings {
+      margin-top: 30px;
+      .lang,
+      .notification,
+      .messages {
+        margin-left: 0px;
+      }
+    }
+  }
+  .lists.animate {
+    top: 100%;
+  }
+  // Logo Section
+  .nav-logo {
+    form {
+      width: 297px;
+      input {
+        height: 22px;
+      }
+    }
+  }
+  // Settings Section
+  .settings {
+    .lang {
+      p {
+        font-size: pxToRem(18);
+        line-height: 22px;
+      }
+    }
+    .notification {
+      .notif-number {
+        top: -6px;
+        right: 0px;
+        p {
+          font-size: pxToRem(11);
+          font-family: "Roboto", sans-serif;
+        }
+      }
+    }
+    .messages {
+      .msgs-number {
+        position: absolute;
+        top: -4px;
+        right: -6px;
+        p {
+          font-size: pxToRem(11);
+          font-family: "Roboto", sans-serif;
+        }
+      }
+    }
+    .info {
+      .name {
+        font-size: pxToRem(20);
+        line-height: 24px;
+      }
+      .type {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+}
+
+/*-------- Start Media Query --------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 639px) {
+  nav {
+    .nav-logo {
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+// Small Media Query
+
+@media all and (min-width: 640px) and (max-width: 767px) {
+  nav {
+    .nav-logo {
+      form {
+        width: 170px;
+      }
+    }
+  }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    .nav-logo {
+      form {
+        width: 200px;
+      }
+    }
+  }
+}
+
+/*-------- End Media Query --------*/

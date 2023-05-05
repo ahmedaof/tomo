@@ -1,0 +1,50 @@
+@use "../../sass/base/function" as *;
+@use "../../sass/base/mixin" as *;
+
+form {
+  label {
+    font-size: pxToRem(18);
+  }
+  input {
+    font-size: pxToRem(14);
+    height: 24px;
+  }
+  .phone,
+  .password {
+    border: 1px solid #999999;
+    input {
+      caret-color: #2e2e2e;
+    }
+    .pass-input.show {
+      background-image: url("../../assets/images/Login/ellipse.png");
+      background-repeat: no-repeat;
+      background-position: right;
+    }
+  }
+  .phone.error,
+  .password.error {
+    outline: 1px solid #cc0033;
+  }
+  .checkbox {
+    input {
+      color: #6b6b6b;
+      width: 18px;
+      height: 18px;
+    }
+  }
+  .main-btn {
+    width: 100%;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: pxToRem(20);
+    padding: 24px 10px;
+    line-height: 20px;
+    margin-bottom: 74px;
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  .validation {
+    color: #cc0033;
+  }
+}

@@ -1,0 +1,84 @@
+@use "../../sass/base/function" as *;
+@use "../../sass/base/mixin" as *;
+
+@include fontFace(
+  "Tajawal",
+  "../../assets/fonts/Tajawal/Tajawal-Regular.ttf",
+  "ttf"
+);
+
+.login {
+  font-family: "Tajawal", sans-serif;
+  .login-form {
+    padding: 0px 100px;
+    .welcome {
+      font-size: pxToRem(30);
+      line-height: 30px;
+    }
+    .sign {
+      color: #999999;
+      font-size: pxToRem(24);
+      line-height: 29px;
+    }
+  }
+  .login-image {
+    width: 45.5%;
+    height: 982px;
+    background-image: url("../../assets/images/Login/login-img.png");
+    background-size: cover;
+    background-position: center center;
+    .logo {
+      padding-top: 43px;
+      padding-left: 37px;
+    }
+    .text-section {
+      padding: 0px 92px 251px 63px;
+      p {
+        font-size: pxToRem(50);
+        line-height: 60px;
+        color: #fafafa;
+      }
+    }
+  }
+}
+
+/*-------- Start Media Query -------*/
+
+// XSmall Screens
+
+@media all and (max-width: 639px) {
+  .login {
+    .login-form {
+      width: 100%;
+      padding: 50px 30px;
+    }
+    .login-image {
+      width: 100%;
+      .text-section {
+        padding: 0px 40px 251px 40px;
+        p {
+          font-size: pxToRem(40);
+        }
+      }
+    }
+  }
+}
+
+// Small Screens
+
+@media all and (min-width: 640px) and (max-width: 767px) {
+  .login {
+    .login-form {
+      padding: 0px 50px;
+    }
+    .login-image {
+      .text-section {
+        p {
+          font-size: pxToRem(40);
+        }
+      }
+    }
+  }
+}
+
+/*-------- End Media Query -------*/

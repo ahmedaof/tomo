@@ -1,0 +1,209 @@
+@use "../../sass/base/function" as *;
+@use "../../sass/base/mixin" as *;
+
+@include fontFace(
+  "Roboto",
+  "../../assets/fonts/Roboto/Roboto-Regular.ttf",
+  "ttf"
+);
+@include fontFace(
+  "Tajawal",
+  "../../assets/fonts/Tajawal/Tajawal-Regular.ttf",
+  "ttf"
+);
+
+.dashboard {
+  font-family: "Tajawal", sans-serif;
+  .dash-container {
+    padding: 26px 79px 34px 86px;
+    // Info Section
+    .info {
+      margin-bottom: 69px;
+      .header {
+        font-size: pxToRem(25);
+      }
+      .text {
+        font-size: pxToRem(18);
+      }
+      button {
+        width: 146px;
+        padding: 6px 0px;
+        font-size: pxToRem(14);
+        line-height: 27px;
+      }
+      .main-btn {
+        margin-left: 30px;
+      }
+    }
+    // Category Section
+    .categories {
+      .category {
+        padding: 16px 39px 16px 17px;
+        .img {
+          top: -29px;
+          right: 34px;
+        }
+        .right-info {
+          p:first-of-type {
+            font-size: pxToRem(18);
+          }
+          p:last-of-type {
+            font-size: pxToRem(14);
+          }
+        }
+        .left-info {
+          p:first-of-type {
+            font-size: pxToRem(16);
+          }
+          p:last-of-type {
+            font-size: pxToRem(30);
+          }
+        }
+      }
+    }
+    // Dashboard Section
+    .dashboard-section {
+      .chart {
+        .chart-text {
+          .heading {
+            font-size: pxToRem(20);
+          }
+          div {
+            font-family: "Roboto", sans-serif;
+            .for {
+              color: #748aa1;
+            }
+          }
+        }
+        .chart-img {
+          div {
+            p:first-of-type {
+              font-size: pxToRem(35);
+              color: #e45f26;
+            }
+            p:last-of-type {
+              font-size: pxToRem(20);
+            }
+          }
+        }
+      }
+      .dash-info {
+        .text-poppins {
+          padding: 15px 39px 19px 52px;
+          .infos {
+            .number {
+              font-size: pxToRem(30);
+            }
+            .green-text {
+              color: #2ad7a1;
+              font-size: pxToRem(18);
+            }
+            .small {
+              font-size: pxToRem(14);
+            }
+          }
+        }
+        .clients {
+          padding: 25px 24px 25px 50px;
+          .header {
+            font-family: "Roboto", sans-serif;
+            .header-text {
+              font-size: pxToRem(20);
+            }
+            .for {
+              color: #748aa1;
+            }
+          }
+          .clients-info {
+            .client {
+              .trophy {
+                top: 67px;
+                right: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*-------- Start Media Query --------*/
+
+// XSmall Media Query
+
+@media all and (max-width: 639px) {
+  .dashboard {
+    .dash-container {
+      padding: 10px;
+      .info {
+        .main-btn {
+          margin-left: 0px;
+          margin-bottom: 20px;
+        }
+      }
+      .dashboard-section {
+        .dash-info {
+          .text-poppins {
+            padding: 10px;
+          }
+          .clients {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Small Media Query
+
+@media all and (min-width: 640px) and (max-width: 767px) {
+  .dashboard {
+    .dash-container {
+      padding: 10px;
+      .dashboard-section {
+        .dash-info {
+          .clients {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium Media Query
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .dashboard {
+    .dash-container {
+      padding: 10px;
+      .info {
+        .main-btn {
+          margin-bottom: 20px;
+        }
+        img {
+          width: 60%;
+        }
+      }
+    }
+  }
+}
+
+// Large Media Query
+
+@media all and (min-width: 1024px) and (max-width: 1279px) {
+  .dashboard {
+    .dash-container {
+      padding: 10px;
+      .info {
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+/*-------- End Media Query --------*/
