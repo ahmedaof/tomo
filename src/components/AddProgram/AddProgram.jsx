@@ -214,7 +214,7 @@ const AddProgram = ({ togglePrograms, handleOverlay }) => {
                                           index + "__" + idx + "calories"
                                         }
                                       >
-                                        تفاصيل الوجبة
+                                        السعرات الحراريه
                                       </label>
                                       <Field
                                         className="field field-textarea"
