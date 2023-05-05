@@ -20,7 +20,7 @@ const Aside = () => {
     firstElements: [
       { id: 1, icon: Control, text: "لوحة التحكم", path: "/dashboard" },
       { id: 2, icon: Train, text: "برامج التدريب", path: "/program" },
-      { id: 3, icon: Clients, text: "العملاء" },
+      { id: 3, icon: Clients, text: "العملاء", path: "/users" },
       { id: 4, icon: Coach, text: "المدربين" },
       { id: 5, icon: Subscription, text: "الإشتراكات" },
       { id: 6, icon: Reports, text: "التقارير" },

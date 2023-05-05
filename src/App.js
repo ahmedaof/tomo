@@ -4,6 +4,7 @@ import "./sass/style.scss";
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Program from "./pages/Program/Program";
+import Users from "./pages/Users/Users";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/program" element={<Program />} />
+          <Route path="/users" element={<Users />} />
         </Routes>
       </BrowserRouter>
     </div>
